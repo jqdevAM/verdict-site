@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verdict</title>
+<meta name="description" content="Verdict — tells Android developers when Google has finished reviewing a release on Google Play. Reviews, canned replies, and crash and ANR rates, on your phone.">
+<link rel="icon" href="verdict.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f8fa;
+    --panel: #ffffff;
+    --ink: #0d1b26;
+    --muted: #4d6577;
+    --line: #dfe6ec;
+    --accent: #0e74c8;
+    --accent-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #08131c;
+      --panel: #0f2029;
+      --ink: #e8f1f7;
+      --muted: #9db2c2;
+      --line: #1e3644;
+      --accent: #22d3ee;
+      --accent-ink: #04263d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 36rem; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  header img {
+    width: 64px; height: 64px; border-radius: 14px; display: block;
+    box-shadow: 0 2px 10px rgb(4 38 61 / .18);
+  }
+  h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 2px; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); margin: 32px 0 10px; font-weight: 600;
+  }
+  p { margin: 0 0 14px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li { padding: 9px 0; border-top: 1px solid var(--line); }
+  ul li:first-child { border-top: 0; padding-top: 0; }
+  ul li:last-child { padding-bottom: 0; }
+  ul strong { display: block; font-weight: 600; }
+  ul span { color: var(--muted); font-size: .94rem; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .links a {
+    display: inline-block; padding: 9px 16px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--panel);
+    text-decoration: none; font-weight: 500;
+  }
+  .links a.primary {
+    background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
+  }
+  footer {
+    margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <img src="verdict.png" alt="" width="64" height="64">
+    <div>
+      <h1>Verdict</h1>
+      <p class="tagline">Google Play review results, on your phone.</p>
+    </div>
+  </header>
+
+  <p>You send a release to Google Play and wait for Google's review. Verdict
+  waits for you: sign in with the Google account you use for the Play
+  Console, and it tells you the moment a release is approved, rejected or
+  published — without opening the console to check.</p>
+
+  <h2>What it does</h2>
+  <div class="panel">
+    <ul>
+      <li>
+        <strong>Every release, with its review state</strong>
+        <span>Per app and per track: draft, in review, approved, not approved,
+        published.</span>
+      </li>
+      <li>
+        <strong>A notification when Google answers</strong>
+        <span>Approved, not approved or published — and nothing for the
+        changes you made yourself a second ago. Google pushes nothing, so the
+        app checks, as often as every fifteen minutes.</span>
+      </li>
+      <li>
+        <strong>Reviews, answered in two taps</strong>
+        <span>Canned replies kept on the phone: pick one, edit it, send.</span>
+      </li>
+      <li>
+        <strong>Crash and ANR rates</strong>
+        <span>Each app's daily figures from Android vitals.</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>What it does not do</h2>
+  <div class="panel">
+    <p>No account with us, no server of ours, no analytics, no ads. The app
+    talks to Google's own APIs with the permission you give at sign-in, and
+    keeps what it needs on your phone. The only thing it ever changes in your
+    Play Console is a reply to a review that you wrote and sent. Signing out
+    revokes its access.</p>
+    <div class="links">
+      <a class="primary" href="privacy/">Privacy policy</a>
+      <a href="privacy/#ru">По-русски</a>
+    </div>
+  </div>
+
+  <h2>Languages</h2>
+  <p>English, Deutsch, Français, Italiano, Русский.</p>
+
+  <footer>
+    Contact: <a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>
+  </footer>
+
+</main>
+</body>
+</html>

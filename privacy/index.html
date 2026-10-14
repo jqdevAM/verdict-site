@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verdict — Privacy Policy</title>
+<meta name="description" content="Verdict privacy policy: the app reads your Play Console data from Google with your permission, keeps what it needs on your phone, and sends it to no server of ours — there is none.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --ink: #1a1a1a;
+    --quiet: #5a6472;
+    --line: #dfe5ec;
+    --ground: #ffffff;
+    --panel: #eef5fb;
+    --accent: #0e74c8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e7ecf2;
+      --quiet: #a8b3c0;
+      --line: #2c3540;
+      --ground: #10161d;
+      --panel: #18222c;
+      --accent: #22d3ee;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background: var(--ground);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header { padding: 40px 0 8px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.2rem 0 .5rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .when { color: var(--quiet); margin: 0; font-size: .9rem; }
+  .lead {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 20px 0 8px;
+  }
+  .lead p { margin: 0; }
+  nav.langs { margin: 18px 0 0; font-size: .95rem; }
+  nav.langs a { color: var(--accent); margin-right: 14px; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: .6rem 0 1rem; }
+  th, td {
+    border-bottom: 1px solid var(--line);
+    padding: .5rem .4rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: .95rem;
+  }
+  th { color: var(--quiet); font-weight: 600; }
+  code {
+    font-family: ui-monospace, "JetBrains Mono", Menlo, monospace;
+    font-size: .88em;
+    background: var(--panel);
+    padding: .1em .35em;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--quiet);
+    font-size: .85rem;
+  }
+  hr.sep { border: 0; border-top: 1px solid var(--line); margin: 3.5rem 0 0; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Verdict — Privacy Policy</h1>
+  <p class="when">Last updated: 14 October 2026</p>
+  <nav class="langs"><a href="#en">English</a><a href="#ru">Русский</a></nav>
+</header>
+
+<section id="en">
+
+<div class="lead">
+  <p><strong>Verdict talks to Google and to nobody else.</strong> It reads
+  your Play Console data from Google's own APIs, with the permission you give
+  when you sign in, and keeps what it needs on your phone. There is no server
+  of ours, no account with us, no analytics, no advertising and no crash
+  reporting.</p>
+</div>
+
+<p>Verdict is an Android app for app developers. It tells you when Google has
+finished reviewing a release you sent to Google Play, and shows your apps'
+reviews and their crash and ANR rates. This policy explains what it reads,
+what it keeps, what it changes, and how to make it forget everything.</p>
+
+<h2>Signing in with Google</h2>
+
+<p>You sign in with your own Google account, in Google's own sign-in page.
+Verdict never sees your password. It asks Google for three permissions:</p>
+
+<div class="scroll"><table>
+  <tr><th>Permission (scope)</th><th>What Verdict uses it for</th></tr>
+  <tr><td><code>androidpublisher</code><br>Google Play Android Developer API</td><td>Reading your apps' releases and the state Google's review has them in; reading your apps' reviews; and posting a reply to a review, <strong>only when you press Send</strong>.</td></tr>
+  <tr><td><code>playdeveloperreporting</code><br>Google Play Developer Reporting API</td><td>Listing the apps your account can see, with their names, and reading their daily crash and ANR rates.</td></tr>
+  <tr><td><code>email</code></td><td>Showing which Google account is signed in, in Settings.</td></tr>
+</table></div>
+
+<p>Google describes the first permission as "view and manage your Google Play
+Developer account". <strong>The only thing Verdict ever changes is a reply to
+a review, and only one you wrote and sent yourself.</strong> It does not
+create, edit, roll out or halt releases; it does not touch store listings,
+prices, users or permissions; and it does not change anything in the
+background.</p>
+
+<h2>What the app reads from Google</h2>
+
+<ul>
+  <li><strong>Your apps:</strong> package names and titles.</li>
+  <li><strong>Releases:</strong> track, release name, version codes and review state.</li>
+  <li><strong>Reviews:</strong> the reviewer's name as Google shows it, the star rating, the text, and your earlier reply if there is one.</li>
+  <li><strong>Vitals:</strong> each app's daily crash rate and ANR rate.</li>
+</ul>
+
+<p>Reviews and vitals are shown on screen and held in memory while the app is
+open; they are not written to storage.</p>
+
+<h2>What the app keeps on your phone</h2>
+
+<div class="scroll"><table>
+  <tr><th>What</th><th>Why</th></tr>
+  <tr><td>Google's sign-in tokens, and your account's email address</td><td>So the app stays signed in and can check for changes in the background. Kept in encrypted storage, with the key held in the Android Keystore.</td></tr>
+  <tr><td>The review state each release was last seen in (package name, track, version codes, state)</td><td>To notice when it changes, which is the whole point of the app.</td></tr>
+  <tr><td>Your canned replies</td><td>So answering a review is two taps and an edit.</td></tr>
+  <tr><td>Your settings: how often to check, and the language on Android 12 and older</td><td>To keep the app as you left it.</td></tr>
+</table></div>
+
+<p>None of it is included in Android's backup to your Google account: the app
+opts out of backup.</p>
+
+<h2>What leaves your phone</h2>
+
+<p><strong>Only requests to Google.</strong> Verdict connects to Google's
+sign-in service (<code>accounts.google.com</code>,
+<code>oauth2.googleapis.com</code>) and to the two APIs above
+(<code>androidpublisher.googleapis.com</code>,
+<code>playdeveloperreporting.googleapis.com</code>). Nothing is sent to us or
+to any third party, because the app contains no server address of ours and no
+third-party SDK that collects data.</p>
+
+<p>A reply you send to a review goes to Google Play and is published under
+your app, as if you had typed it in the Play Console.</p>
+
+<h2>Checking in the background</h2>
+
+<p>Google sends no notification when a review finishes, so Verdict checks: by
+default every 30 minutes, at most every 15, and less often when Android is
+saving battery. You choose the interval in Settings. Each check asks Google
+for your releases and compares them with what was seen before. When Google
+approves, rejects or publishes a release, the app shows a notification on
+your phone. Nothing else happens in the background.</p>
+
+<h2>Google API Services User Data Policy</h2>
+
+<p>Verdict's use and transfer of information received from Google APIs
+adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+API Services User Data Policy</a>, including the Limited Use requirements.
+The data is used only to show you your own apps, releases, reviews and vitals
+and to notify you of review results. It is not sold, not used for
+advertising, not transferred to anyone, and not read by any person other than
+you.</p>
+
+<h2>Permissions, and what each is for</h2>
+
+<div class="scroll"><table>
+  <tr><th>Permission</th><th>What it is for</th></tr>
+  <tr><td>Internet and network state</td><td>Talking to Google's APIs, and waiting for a connection before a background check.</td></tr>
+  <tr><td>Notifications</td><td>Telling you a review has finished. Refusing it means the app still works but cannot tell you.</td></tr>
+  <tr><td>Run at startup, wake lock, foreground service</td><td>Declared by Android's WorkManager library, which schedules the background check and keeps it scheduled after the phone restarts.</td></tr>
+</table></div>
+
+<h2>Signing out and deleting your data</h2>
+
+<ul>
+  <li><strong>Sign out</strong> (Settings) removes the sign-in from the phone and asks Google to revoke Verdict's access to your account.</li>
+  <li><strong>Revoke access yourself</strong> at any time, from any device, at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  <li><strong>Everything:</strong> uninstalling the app, or clearing its storage in Android's settings, removes everything listed above. Nothing is kept anywhere else, because nothing was ever sent anywhere but Google.</li>
+</ul>
+
+<p>Replies you posted to reviews are part of your Play Console and stay there;
+you can edit or delete them in the Play Console.</p>
+
+<h2>Children</h2>
+
+<p>Verdict is a tool for app developers and is not directed at children.</p>
+
+<h2>Changes</h2>
+
+<p>If this policy changes, the new version appears on this page with a new
+date at the top.</p>
+
+<h2>Contact</h2>
+
+<p>Questions about this policy or about your data:
+<a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>.</p>
+
+</section>
+
+<hr class="sep">
+
+<section id="ru" lang="ru">
+
+<header>
+  <h1>Verdict — Политика конфиденциальности</h1>
+  <p class="when">Обновлено: 14 октября 2026 года</p>
+</header>
+
+<div class="lead">
+  <p><strong>Verdict общается только с Google.</strong> Приложение читает
+  данные вашей Play Console через API самого Google — с разрешения, которое вы
+  даёте при входе, — и хранит нужное на телефоне. У нас нет сервера, нет
+  учётных записей, нет аналитики, рекламы и отчётов о сбоях.</p>
+</div>
+
+<p>Verdict — приложение для Android для разработчиков приложений. Оно
+сообщает, когда Google закончил проверку релиза, отправленного в Google Play,
+и показывает отзывы о ваших приложениях и частоту их сбоев и ANR. Здесь
+описано, что приложение читает, что хранит, что изменяет и как заставить его
+всё забыть.</p>
+
+<h2>Вход через Google</h2>
+
+<p>Вы входите со своим аккаунтом Google на странице входа самого Google.
+Verdict никогда не видит ваш пароль. Приложение запрашивает у Google три
+разрешения:</p>
+
+<div class="scroll"><table>
+  <tr><th>Разрешение (scope)</th><th>Зачем оно Verdict</th></tr>
+  <tr><td><code>androidpublisher</code><br>Google Play Android Developer API</td><td>Чтение релизов ваших приложений и статуса проверки Google; чтение отзывов; публикация ответа на отзыв — <strong>только когда вы нажимаете «Отправить»</strong>.</td></tr>
+  <tr><td><code>playdeveloperreporting</code><br>Google Play Developer Reporting API</td><td>Список приложений, доступных вашему аккаунту, с их названиями, и дневная частота сбоев и ANR.</td></tr>
+  <tr><td><code>email</code></td><td>Показать в настройках, под каким аккаунтом Google выполнен вход.</td></tr>
+</table></div>
+
+<p>Первое разрешение Google описывает как «просмотр и управление вашим
+аккаунтом разработчика Google Play». <strong>Единственное, что Verdict
+когда-либо изменяет, — ответ на отзыв, и только тот, который вы сами написали
+и отправили.</strong> Приложение не создаёт, не меняет, не выпускает и не
+останавливает релизы; не трогает страницы в магазине, цены, пользователей и
+права доступа; и ничего не меняет в фоне.</p>
+
+<h2>Что приложение читает у Google</h2>
+
+<ul>
+  <li><strong>Ваши приложения:</strong> имена пакетов и названия.</li>
+  <li><strong>Релизы:</strong> трек, название релиза, коды версий и статус проверки.</li>
+  <li><strong>Отзывы:</strong> имя автора в том виде, в каком его показывает Google, оценка, текст и ваш прежний ответ, если он есть.</li>
+  <li><strong>Показатели:</strong> дневная частота сбоев и ANR для каждого приложения.</li>
+</ul>
+
+<p>Отзывы и показатели выводятся на экран и держатся в памяти, пока
+приложение открыто; на устройство они не записываются.</p>
+
+<h2>Что хранится на телефоне</h2>
+
+<div class="scroll"><table>
+  <tr><th>Что</th><th>Зачем</th></tr>
+  <tr><td>Токены входа Google и адрес почты вашего аккаунта</td><td>Чтобы приложение оставалось в аккаунте и могло проверять изменения в фоне. Хранятся в зашифрованном хранилище, ключ — в Android Keystore.</td></tr>
+  <tr><td>Статус проверки, в котором каждый релиз был виден в прошлый раз (имя пакета, трек, коды версий, статус)</td><td>Чтобы заметить изменение — ради этого приложение и существует.</td></tr>
+  <tr><td>Ваши шаблоны ответов</td><td>Чтобы ответ на отзыв занимал два нажатия и правку.</td></tr>
+  <tr><td>Ваши настройки: как часто проверять и язык на Android 12 и старше</td><td>Чтобы приложение оставалось таким, каким вы его оставили.</td></tr>
+</table></div>
+
+<p>Ничего из этого не попадает в резервную копию Android в вашем аккаунте
+Google: приложение отказывается от резервного копирования.</p>
+
+<h2>Что покидает телефон</h2>
+
+<p><strong>Только запросы к Google.</strong> Verdict подключается к службе
+входа Google (<code>accounts.google.com</code>,
+<code>oauth2.googleapis.com</code>) и к двум API выше
+(<code>androidpublisher.googleapis.com</code>,
+<code>playdeveloperreporting.googleapis.com</code>). Нам и третьим лицам
+ничего не отправляется: в приложении нет адреса нашего сервера и нет
+сторонних SDK, собирающих данные.</p>
+
+<p>Ответ на отзыв уходит в Google Play и публикуется от имени вашего
+приложения — так же, как если бы вы написали его в Play Console.</p>
+
+<h2>Проверка в фоне</h2>
+
+<p>Google не сообщает о завершении проверки, поэтому Verdict проверяет сам:
+по умолчанию раз в 30 минут, не чаще раза в 15 минут и реже, когда Android
+экономит заряд. Интервал выбирается в настройках. При каждой проверке
+приложение запрашивает у Google ваши релизы и сравнивает их с тем, что видело
+раньше. Когда Google одобряет, отклоняет или публикует релиз, на телефоне
+появляется уведомление. Больше в фоне ничего не происходит.</p>
+
+<h2>Правила Google в отношении данных пользователей API</h2>
+
+<p>Использование и передача Verdict информации, полученной из API Google,
+соответствуют
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Правилам
+в отношении данных пользователей API-сервисов Google</a>, включая требования
+ограниченного использования (Limited Use). Данные используются только для
+того, чтобы показать вам ваши приложения, релизы, отзывы и показатели и
+уведомить о результатах проверки. Они не продаются, не используются для
+рекламы, никому не передаются и никем, кроме вас, не просматриваются.</p>
+
+<h2>Разрешения и зачем они</h2>
+
+<div class="scroll"><table>
+  <tr><th>Разрешение</th><th>Зачем</th></tr>
+  <tr><td>Интернет и состояние сети</td><td>Обращение к API Google и ожидание сети перед фоновой проверкой.</td></tr>
+  <tr><td>Уведомления</td><td>Сообщить, что проверка закончилась. Если отказать, приложение работает, но сообщить не сможет.</td></tr>
+  <tr><td>Запуск при включении, удержание пробуждения, служба переднего плана</td><td>Объявлены библиотекой Android WorkManager, которая планирует фоновую проверку и сохраняет расписание после перезагрузки телефона.</td></tr>
+</table></div>
+
+<h2>Выход и удаление данных</h2>
+
+<ul>
+  <li><strong>Выход</strong> (в настройках) удаляет вход с телефона и просит Google отозвать доступ Verdict к вашему аккаунту.</li>
+  <li><strong>Отозвать доступ самостоятельно</strong> можно в любой момент и с любого устройства: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  <li><strong>Полностью:</strong> удаление приложения или очистка его данных в настройках Android убирает всё перечисленное выше. Больше нигде ничего не хранится, потому что ничего, кроме запросов к Google, никуда не отправлялось.</li>
+</ul>
+
+<p>Опубликованные ответы на отзывы — часть вашей Play Console и остаются там;
+изменить или удалить их можно в Play Console.</p>
+
+<h2>Дети</h2>
+
+<p>Verdict — инструмент для разработчиков приложений и не предназначен для
+детей.</p>
+
+<h2>Изменения</h2>
+
+<p>Если политика изменится, новая версия появится на этой странице, а сверху
+будет новая дата.</p>
+
+<h2>Контакт</h2>
+
+<p>Вопросы о политике или о ваших данных:
+<a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>.</p>
+
+</section>
+
+<footer>
+  Verdict · <a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>
+</footer>
+
+</main>
+</body>
+</html>
