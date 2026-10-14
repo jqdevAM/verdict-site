@@ -144,6 +144,7 @@ open; they are not written to storage.</p>
   <tr><td>The review state each release was last seen in (package name, track, version codes, state)</td><td>To notice when it changes, which is the whole point of the app.</td></tr>
   <tr><td>Your canned replies</td><td>So answering a review is two taps and an edit.</td></tr>
   <tr><td>Your settings: how often to check, and the language on Android 12 and older</td><td>To keep the app as you left it.</td></tr>
+  <tr><td>Your developer accounts: their names and which of your apps is in each</td><td>To show one account's apps at a time, as the Play Console does.</td></tr>
 </table></div>
 
 <p>None of it is included in Android's backup to your Google account: the app
@@ -153,11 +154,19 @@ opts out of backup.</p>
 
 <p><strong>Only requests to Google.</strong> Verdict connects to Google's
 sign-in service (<code>accounts.google.com</code>,
-<code>oauth2.googleapis.com</code>) and to the two APIs above
+<code>oauth2.googleapis.com</code>), to the two APIs above
 (<code>androidpublisher.googleapis.com</code>,
-<code>playdeveloperreporting.googleapis.com</code>). Nothing is sent to us or
-to any third party, because the app contains no server address of ours and no
-third-party SDK that collects data.</p>
+<code>playdeveloperreporting.googleapis.com</code>), and to the Google Play
+Store (<code>play.google.com</code>). Nothing is sent to us or to any third
+party, because the app contains no server address of ours and no third-party
+SDK that collects data.</p>
+
+<p><strong>The Play Store request</strong> is how the app learns which
+developer account an app belongs to, which Google's APIs do not say: for an
+app in none of your accounts yet, it opens that app's public store page, the
+one anyone can open in a browser, and reads the developer's name from it.
+Only the app's package name goes with it: no sign-in token, no cookie and
+nothing about you.</p>
 
 <p>A reply you send to a review goes to Google Play and is published under
 your app, as if you had typed it in the Play Console.</p>
@@ -280,6 +289,7 @@ Verdict никогда не видит ваш пароль. Приложение
   <tr><td>Статус проверки, в котором каждый релиз был виден в прошлый раз (имя пакета, трек, коды версий, статус)</td><td>Чтобы заметить изменение — ради этого приложение и существует.</td></tr>
   <tr><td>Ваши шаблоны ответов</td><td>Чтобы ответ на отзыв занимал два нажатия и правку.</td></tr>
   <tr><td>Ваши настройки: как часто проверять и язык на Android 12 и старше</td><td>Чтобы приложение оставалось таким, каким вы его оставили.</td></tr>
+  <tr><td>Ваши аккаунты разработчика: их названия и какие из ваших приложений в каком</td><td>Чтобы показывать приложения одного аккаунта, как это делает Play Console.</td></tr>
 </table></div>
 
 <p>Ничего из этого не попадает в резервную копию Android в вашем аккаунте
@@ -289,11 +299,20 @@ Google: приложение отказывается от резервного 
 
 <p><strong>Только запросы к Google.</strong> Verdict подключается к службе
 входа Google (<code>accounts.google.com</code>,
-<code>oauth2.googleapis.com</code>) и к двум API выше
+<code>oauth2.googleapis.com</code>), к двум API выше
 (<code>androidpublisher.googleapis.com</code>,
-<code>playdeveloperreporting.googleapis.com</code>). Нам и третьим лицам
-ничего не отправляется: в приложении нет адреса нашего сервера и нет
-сторонних SDK, собирающих данные.</p>
+<code>playdeveloperreporting.googleapis.com</code>) и к магазину Google Play
+(<code>play.google.com</code>). Нам и третьим лицам ничего не отправляется:
+в приложении нет адреса нашего сервера и нет сторонних SDK, собирающих
+данные.</p>
+
+<p><strong>Запрос к Play Store</strong> нужен, чтобы узнать, к какому
+аккаунту разработчика относится приложение: API Google этого не сообщают.
+Для приложения, которое ещё не отнесено ни к одному из ваших аккаунтов,
+Verdict открывает его публичную страницу в магазине — ту, что любой может
+открыть в браузере, — и берёт оттуда имя разработчика. С запросом уходит
+только имя пакета приложения: без токена входа, без cookie и без сведений
+о вас.</p>
 
 <p>Ответ на отзыв уходит в Google Play и публикуется от имени вашего
 приложения — так же, как если бы вы написали его в Play Console.</p>
